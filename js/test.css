@@ -1,0 +1,173 @@
+.novedades {
+  padding: 6em 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.novedades_titleContainer {
+  overflow: hidden;
+
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+}
+
+.span_nuestras {
+
+  color: #000000;
+  text-align: center;
+  font-family: Facit;
+  font-size: 3rem;
+}
+
+.span_novedades {
+  text-align: center;
+  font-size: 4.5rem;
+  font-family: FacitBold;
+  color: #014492;
+}
+
+.novedades_arrows {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+}
+
+.prev {
+  border-bottom: 10px solid;
+  border-left: 10px solid;
+  border-color: #014492;
+  transform: rotate(45deg);
+  left: 3%;
+  /* top: 1em; */
+  /* bottom: 0.5em; */
+  /* margin-top: 2em; */
+  cursor: pointer;
+  z-index: 5;
+  align-self: flex-end;
+}
+
+.next {
+  border-bottom: 10px solid;
+  border-left: 10px solid;
+  border-color: #014492;
+  transform: rotate(-135deg);
+  right: 3%;
+  /* margin-top: 2em; */
+  cursor: pointer;
+  z-index: 5;
+}
+
+.carruselContainer {
+  width: 100%;
+  width: 80%;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#carrusel{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+.carruselContainerTest{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+.carruselAlign{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 100%;
+}
+
+
+.imgContainer {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  /* background-color: red; */
+}
+
+.novedades_imgContainer {
+  background-color: #014492;
+  height: 100%;
+}
+
+.novedades_imgContainer img {
+  box-shadow: 0px 0px 5px 5px #ccc;
+  width: 100%;
+  height: 100%;
+  height: 30vh;
+  object-fit: cover;
+}
+
+
+.filter {
+  width: 100px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -50%;
+  bottom: 0;
+  z-index: 1;
+  padding: 5em 0 1em 0;
+  cursor: pointer;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgb(237, 240, 242, 0.01) 0%,
+    rgb(194, 217, 233, 0.02) 18%,
+    rgb(0, 116, 194, 0.6) 80%,
+    rgb(1, 69, 147, 0.8) 100%
+  );
+}
+
+.novedades_imgContainer:hover .hoverEffect {
+  opacity: 70%;
+}
+
+.novedades_imgContainer:hover .filter {
+  opacity: 70%;
+}
+.spanContainer{
+  /* background-color: red; */
+  padding: 1em 0;
+}
+.imgContainer span {
+  font-family: Facit;
+  color: #000000;
+  font-size: 1rem;
+  padding: 0.5em;
+}
+
+button {
+  background-color: #014492;
+  padding: 0.3em 0;
+  border: none;
+  font-family: FacitBold;
+  color: #ffffff;
+  width: 35%;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 80%;
+}
