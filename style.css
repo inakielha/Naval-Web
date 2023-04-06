@@ -197,7 +197,6 @@ HEADER IMAGES
   display: flex;
   width: 100%;
   height: 430px;
-  /* margin-top: 6em; */
   background: rgb(1, 68, 146);
   box-shadow: 0 8px 5px -5px gray;
 }
@@ -205,8 +204,6 @@ HEADER IMAGES
 .header div {
   display: flex;
   width: 100%;
-  /* flex-grow: 0; */
-  /* width: 600px; */
   height: 100%;
   position: relative;
   transition: width 0.5s ease;
@@ -215,8 +212,6 @@ HEADER IMAGES
 .headerContainer {
   display: flex;
   width: 100%;
-  /* flex-grow: 0; */
-  /* width: 600px; */
   height: 100%;
   position: relative;
   transition: width 2s ease;
@@ -226,30 +221,12 @@ HEADER IMAGES
   width: 150%;
 }
 
-/* .headerContainer:hover .hoverMarca {
-    visibility: visible;
-    opacity: .8;
-} */
 
 .headerContainer:hover .imgHeader {
   cursor: pointer;
-  /* width: 350px; */
-  /* width: 150%; */
   opacity: 1;
   filter: contrast(120%);
 }
-
-/* .header div:hover .imgHeader{
-    cursor: pointer;
-    width: 350px;
-    width: 150%;
-    opacity: 1;
-    filter: contrast(120%);
-} */
-/* .header div:hover .hoverMarca{
-    visibility: visible;
-    opacity: .5;
-} */
 
 .imgHeader {
   width: 0;
@@ -294,7 +271,6 @@ HEADER IMAGES
 
 .funciones {
   width: 100%;
-  /* background-color: red; */
   height: 50%;
   display: flex;
   flex-direction: column;
@@ -1068,6 +1044,17 @@ MEDIA QUERYS
     height: auto;
     position: relative;
     transition: width 2s ease;
+  }
+  .headerContainer:hover {
+    width: 100%;
+  }
+  .headerContainer:hover .imgHeader {
+    cursor: pointer;
+    opacity: 0;
+    filter: contrast(120%);
+  }
+  .headerContainer:hover .hoverMarca {
+    visibility: hidden;
   }
   .imgHeader {
     width: 0;
