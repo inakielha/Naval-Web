@@ -1050,11 +1050,12 @@ MEDIA QUERYS
   }
   .headerContainer:hover .imgHeader {
     cursor: pointer;
-    opacity: 0;
-    filter: contrast(120%);
+    opacity: 1;
+    /* filter: contrast(120%); */
   }
   .headerContainer:hover .hoverMarca {
     visibility: hidden;
+    /* background-color: red; */
   }
   .imgHeader {
     width: 0;
