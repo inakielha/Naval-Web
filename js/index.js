@@ -7,6 +7,17 @@ document.querySelector(".closeContainer").addEventListener("click", () => {
     document.querySelector(".nav_mobile").classList.toggle("show")
 })
 
+// document.querySelectorAll("a").addEventListener("click", () => {
+//   console.log("q c yo")
+//   document.querySelector(".nav_mobile").classList.toggle("show")
+// })
+const aElements = document.querySelectorAll(".nav_mobile li a")
+aElements.forEach((a) => {
+  a.addEventListener("click", () => {
+    document.querySelector(".nav_mobile").classList.toggle("show");
+  });
+});
+
 window.addEventListener('scroll', function () {
     // Calcula la posición del fondo de la ventana del navegador
     var windowHeight = window.innerHeight;

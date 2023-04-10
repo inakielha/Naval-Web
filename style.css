@@ -48,7 +48,7 @@ ul {
 
 .contenedorSection {
   /* background-color: red; */
-  padding: 6em 0;
+  padding: 15vh 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -119,6 +119,10 @@ nav {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
   cursor: pointer;
+}
+.nav_info a{
+  color: #014492;
+  
 }
 
 .nav_info li:hover {
@@ -339,7 +343,9 @@ HEADER IMAGES
 /* NOVEDADES   */
 /* ----------------------- */
 .novedades {
-  padding: 6em 0;
+  /* padding: 6em 0; */
+  padding: 15vh 0;
+  /* background-color: red; */
   position: relative;
   overflow: hidden;
 }
@@ -583,8 +589,7 @@ _____________________ */
 GARANTIA
 ---------------------------- */
 .garantiaSection {
-  /* background-color: red; */
-  padding: 6em 0;
+  padding: 15vh 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -821,6 +826,10 @@ MEDIA QUERYS
   body {
     overflow-x: hidden;
   }
+  .contenedorSection{
+    padding: 10vh 0;
+    /* padding: 0; */
+  }
   /* ------------------WSP LOGO--------------- */
   .whsContainer {
     display: none;
@@ -965,7 +974,7 @@ MEDIA QUERYS
   }
 
   .nav_infoContainer ul li:hover a {
-    color: orangered;
+    color: #014492;
   }
   .hamb_container{
     display: flex;
@@ -1065,6 +1074,10 @@ MEDIA QUERYS
     display: none;
   }
 /* -------------------NOVEDADES------------------- */
+.novedades {
+  /* padding: 6em 0; */
+  padding: 10vh 0;
+}
 .carruselContainer{
   align-items: start;
   width: 50%;
@@ -1195,7 +1208,7 @@ MEDIA QUERYS
   align-items: center;
   justify-content: center;
   gap: 1em;
-  /* background-color: rebeccapurple; */
+  padding: 10vh 0;
 }
 .garantiaColumnTwo{
   gap: 1em;
