@@ -2,6 +2,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-padding-top: 7.5vh;
+}
+html{
+  font-size: 16px;
 }
 
 @font-face {
@@ -49,13 +53,17 @@ ul {
 .contenedorSection {
   /* background-color: red; */
   padding: 15vh 0;
+  /* height: 80vh; */
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
+/* DIV CON TAMAÑO DE NAV  */
+.espacioBlanco{
+  height: 10vh;
+}
 /* NAVEGADOR */
 nav {
   top: 0;
@@ -197,25 +205,40 @@ nav {
 /* -----------------
 HEADER IMAGES
 ----------------- */
+.testheader{
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
 .header {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 430px;
-  background: rgb(1, 68, 146);
-  box-shadow: 0 8px 5px -5px gray;
+  /* padding: 2em 0; */
+  /* height: 430px; */
+  height: 80%;
+  background: #fff;
+  gap: 0.6em;
+  /* box-shadow: 0 8px 5px -5px gray; */
 }
 
 .header div {
   display: flex;
   width: 100%;
+  /* background: rgb(1, 68, 146); */
+  /* background-color: transparent; */
   height: 100%;
   position: relative;
   transition: width 0.5s ease;
 }
 
 .headerContainer {
+  background-color: rgb(1, 68, 146, 0.8);
   display: flex;
-  width: 100%;
+  /* width: 20%; */
   height: 100%;
   position: relative;
   transition: width 2s ease;
@@ -223,6 +246,7 @@ HEADER IMAGES
 
 .headerContainer:hover {
   width: 150%;
+  width: 250%;
 }
 
 
@@ -257,13 +281,16 @@ HEADER IMAGES
   visibility: hidden;
   /* visibility: visible; */
   cursor: pointer;
+  transition: background-color 2s ease;
+
 }
 .headerContainer:hover .hoverMarca {
   visibility: visible;
   background-color: rgb(1, 68, 146, 0.8);
-  background-color: rgb(1, 68, 146);
-  transition: background-color 2s ease;
+  background-color: rgb(1, 68, 146, 0.9);
+  transition: background-color 1s ease;
 }
+
 
 .hoverMarca img {
   width: 50%;
@@ -280,10 +307,12 @@ HEADER IMAGES
   flex-direction: column;
   align-items: end;
   justify-content: center;
+  background-color: transparent;
 }
 
 #funcionesHeight {
   height: 20%;
+
 }
 
 .funcionesTitulo {
@@ -306,7 +335,6 @@ HEADER IMAGES
 
 .funciones_marcasContainer {
   width: 100%;
-  /* background-color: orange; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -345,6 +373,7 @@ HEADER IMAGES
 .novedades {
   /* padding: 6em 0; */
   padding: 15vh 0;
+  /* height: 15vh; */
   /* background-color: red; */
   position: relative;
   overflow: hidden;
@@ -352,25 +381,40 @@ HEADER IMAGES
 
 .novedades_titleContainer {
   overflow: hidden;
-
+  /* height: auto; */
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
 }
+.novedades_titleContainer span {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
 
 .span_nuestras {
-
+  padding: 0;
+  /* background-color: red; */
   color: #000000;
   text-align: center;
+  line-height: 100%;
   font-family: Facit;
-  font-size: 3rem;
+  font-size: 2rem;
+  flex-grow: 1;
+  height: auto;
+
 }
 
 .span_novedades {
+  line-height: 100%;
+  flex-grow: 1;
   text-align: center;
-  font-size: 4.5rem;
+  font-size: 3.2rem;
   font-family: FacitBold;
   color: #014492;
+  letter-spacing: 3px;
+  padding-bottom: 0.2em;
+  /* background-color: green; */
 }
 
 .novedades_arrows {
@@ -434,8 +478,10 @@ HEADER IMAGES
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 90%;
+  width: 80%;
   height: 100%;
+  /* background-color: red; */
+  gap: 1em;
 }
 
 
@@ -446,21 +492,21 @@ HEADER IMAGES
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 50%;
+  width: 100%;
   height: 100%;
-  /* background-color: red; */
 }
 
 .novedades_imgContainer {
   background-color: #014492;
-  height: 100%;
+  /* height: 40vh; */
+  width: 85%;
+  width: 100%;
 }
 
 .novedades_imgContainer img {
   box-shadow: 0px 0px 5px 5px #ccc;
   width: 100%;
-  height: 100%;
-  height: 30vh;
+  aspect-ratio: 1/1;
   object-fit: cover;
 }
 
@@ -494,7 +540,7 @@ HEADER IMAGES
 }
 .spanContainer{
   /* background-color: red; */
-  padding: 1em 0;
+  padding: 0.5em 0;
 }
 .imgContainer span {
   font-family: Facit;
@@ -505,12 +551,12 @@ HEADER IMAGES
 
 button {
   background-color: #014492;
-  padding: 0.3em 0;
+  padding: 0.2em 0;
   border: none;
   font-family: FacitBold;
   color: #ffffff;
   width: 35%;
-  font-size: 1.2rem;
+  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -528,7 +574,7 @@ _____________________ */
   width: 100%;
   width: 80%;
   /* background-color: blue; */
-  gap: 1em;
+  gap: 2em;
 }
 
 .testo{
@@ -539,6 +585,7 @@ _____________________ */
   /* background-color: red; */
 }
 .yates_imgContainer {
+  height: 50vh;
   width: 100%;
   position: relative;
   box-shadow: 5px 5px 10px 2px #8080805e,
@@ -548,36 +595,35 @@ _____________________ */
 
 .yates_imgContainer img {
   width: 100%;
-  height: 45vh;
+  height: 100%;
   object-fit: cover;
 }
 
 .yates_textContainer {
   width: 100%;
-  /* padding-left: 2em; */
   /* background-color: green; */
 }
 
 #text {
   font-family: Facit;
   color: #000000;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 #textTwo {
-  /* text-justify: distribute-all-lines; */
   padding: 0;
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-family: FacitBold;
   color: #014492;
   text-transform: uppercase;
-  line-height: 60px;
+  line-height: 100%;
+  /* background-color: red; */
 }
 
 #textThree {
   font-family: Facit;
   color: #000000;
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: 1em 0;
   /* background-color: red; */
 }
@@ -590,15 +636,19 @@ GARANTIA
 ---------------------------- */
 .garantiaSection {
   padding: 15vh 0;
+  /* height: 80vh; */
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2em;
+  gap: 0.5em;
 }
 .garantia span{
   display: none;
+}
+.garantia p{
+  padding: 0.1em;
 }
 .garantiaColumnTwo{
   display: flex;
@@ -606,16 +656,20 @@ GARANTIA
   align-items: center;
   align-content: center;
   justify-content: center;
+  /* background-color: red; */
+  gap: 1em;
 }
 .test{
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 50vh;
 }
 .garantiaContenedor {
   background-color: #014492;
   box-shadow: 0px 0px 10px 10px #ccc;
-  width: 80%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -675,6 +729,7 @@ NUESTRA HISTORIA
 FOOTER 
 -------------------- */
 footer {
+  margin-top: 4em;
   width: 100%;
   display: flex;
   align-items: center;
@@ -827,8 +882,8 @@ MEDIA QUERYS
     overflow-x: hidden;
   }
   .contenedorSection{
+    /* height: 50vh; */
     padding: 10vh 0;
-    /* padding: 0; */
   }
   /* ------------------WSP LOGO--------------- */
   .whsContainer {
@@ -1167,7 +1222,6 @@ MEDIA QUERYS
   padding-left: 2em;
   padding-left: 0;
   text-align: center;
-  /* background-color: red; */
 }
 .yates_textContainer button{
   display: none;
@@ -1199,6 +1253,9 @@ MEDIA QUERYS
   display: block;
   text-align: center;
 }
+.yates_imgContainer{
+  height: auto;
+}
 .yates_imgContainer img {
   height:auto;
 }
@@ -1211,6 +1268,7 @@ MEDIA QUERYS
   padding: 10vh 0;
 }
 .garantiaColumnTwo{
+  height: 100%;
   gap: 1em;
 }
 .garantia{
@@ -1221,10 +1279,10 @@ MEDIA QUERYS
   justify-content: start;
   gap: 0.5em;
   font-size: 0.2rem;
-  /* background-color: red; */
 }
 .garantia span{
   display: block;
+  /* background-color: green; */
 }
 .garantia p{
   display: none;
@@ -1236,11 +1294,11 @@ MEDIA QUERYS
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* background-color: green; */
   align-items: center;
   width: 80%;
   align-self: center;
   gap: 1em;
+  height: 100%;
 }
 .test button{
   width: 100%;
