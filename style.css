@@ -246,7 +246,7 @@ HEADER IMAGES
 
 .headerContainer:hover {
   width: 150%;
-  width: 250%;
+  width: 200%;
 }
 
 
@@ -752,7 +752,7 @@ footer {
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  gap: 0.2em;
+  gap: 0.3em;
 }
 
 footer .text {
@@ -807,7 +807,7 @@ footer .text {
   display: flex;
 
   flex-direction: column;
-  gap: 1em;
+  gap: 0.3em;
   justify-content: start;
   align-items: start;
 }
