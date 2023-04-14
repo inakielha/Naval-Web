@@ -52,7 +52,7 @@ ul {
 
 .contenedorSection {
   /* background-color: red; */
-  padding: 15vh 0;
+  padding: 10vh 0;
   /* height: 80vh; */
   position: relative;
   display: flex;
@@ -219,7 +219,7 @@ HEADER IMAGES
   width: 100%;
   /* padding: 2em 0; */
   /* height: 430px; */
-  height: 80%;
+  height: 90%;
   background: #fff;
   gap: 0.6em;
   /* box-shadow: 0 8px 5px -5px gray; */
@@ -236,7 +236,10 @@ HEADER IMAGES
 }
 
 .headerContainer {
-  background-color: rgb(1, 68, 146, 0.8);
+  /* background-color: rgb(1, 68, 146, 0.8);
+  background-color: rgba(1, 43, 90, 0.8); */
+  background-color: #014492;
+
   display: flex;
   /* width: 20%; */
   height: 100%;
@@ -246,7 +249,7 @@ HEADER IMAGES
 
 .headerContainer:hover {
   width: 150%;
-  width: 200%;
+  width: 270%;
 }
 
 
@@ -272,6 +275,7 @@ HEADER IMAGES
   justify-content: center;
   background-color: rgb(1, 68, 146);
   background-color: rgb(1, 68, 146, 0.8);
+  background-color: rgba(1, 43, 90, 0.8);
   width: 100%;
   position: absolute;
   left: 0;
@@ -286,18 +290,19 @@ HEADER IMAGES
 }
 .headerContainer:hover .hoverMarca {
   visibility: visible;
-  background-color: rgb(1, 68, 146, 0.8);
-  background-color: rgb(1, 68, 146, 0.9);
+  background-color: rgb(1, 69, 146, 0.9);
+  background-color: rgba(1, 43, 90, 0.9);
   transition: background-color 1s ease;
 }
 
 
 .hoverMarca img {
-  width: 50%;
+  width: 40%;
+  opacity: 1;
 }
 
 #clubCar {
-  width: 35%;
+  width: 30%;
 }
 
 .funciones {
@@ -372,7 +377,7 @@ HEADER IMAGES
 /* ----------------------- */
 .novedades {
   /* padding: 6em 0; */
-  padding: 15vh 0;
+  padding: 10vh 0;
   /* height: 15vh; */
   /* background-color: red; */
   position: relative;
@@ -609,6 +614,8 @@ _____________________ */
   font-family: Facit;
   color: #000000;
   font-size: 2rem;
+  /* display: block; */
+  line-height: 100%;
 }
 
 #textTwo {
@@ -617,8 +624,7 @@ _____________________ */
   font-family: FacitBold;
   color: #014492;
   text-transform: uppercase;
-  line-height: 100%;
-  /* background-color: red; */
+  line-height: 2.5rem;
 }
 
 #textThree {
@@ -636,7 +642,7 @@ _____________________ */
 GARANTIA
 ---------------------------- */
 .garantiaSection {
-  padding: 15vh 0;
+  padding: 10vh 0;
   /* height: 80vh; */
   position: relative;
   display: flex;
@@ -674,6 +680,7 @@ GARANTIA
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all ease 0.6s;
 }
 
 .garantiaContenedor:hover {
@@ -704,7 +711,7 @@ GARANTIA
 
 .marca img {
   opacity: 1;
-  width: 70%;
+  width: 50%;
   box-shadow: none;
 }
 
@@ -828,15 +835,15 @@ footer .text {
   border-radius: 50%;
   background-color: #ffffff;
   border: 0.5px solid #edf0f2;
-  box-shadow: 0px 0px 10px #014492;
+  box-shadow: 0px 0px 5px #6e6e6e;
   cursor: pointer;
 }
 .redesContainer img{
-  width: 100%;
+  width: 80%;
 }
 
 .redesContainer div:hover {
-  box-shadow: 0px 0px 15px 2px #014492;
+  box-shadow: 0px 0px 10px  #6e6e6e;
 }
 
 /* ----------------------
@@ -879,10 +886,20 @@ KEYFRAMES
 /* ---------------------------
 MEDIA QUERYS
 -------------------------- */
+
 @media only screen and (min-width: 1500px) {
   html{
     font-size: 25px;
   }
+  /* .novedades{
+    padding: 10vh 0;
+  }
+  .garantiaSection{
+    padding: 10vh 0;
+  }
+  .contenedorSection {
+    padding: 10vh 0;
+  } */
   
 }
 @media only screen and (max-width: 640px) {
