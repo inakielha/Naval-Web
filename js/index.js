@@ -75,3 +75,29 @@ carouselSlide.addEventListener("transitionend", () => {
     carouselSlide.style.transform = `translateX(-${size * counter}px)`;
   }
 });
+
+
+// CAMBIAR TEXTO DE IMAGENES ON HOVER  
+// const imageContainers = document.querySelectorAll('.headerContainer');
+// const otherTexts = document.querySelectorAll('.headerContainer:not(:hover)');
+
+// imageContainers.forEach(container => {
+//   // container.addEventListener('mouseover', () => {
+//   //   currentText.style.fontSize = '200px';
+//   //   let pixelesText;
+//   //   otherTexts.length === 5 ? pixelesText = "2rem" : pixelesText = "0.5rem"
+//   //   otherTexts.forEach(text => {
+//   //     const textNotHover = text.querySelector('.text');
+//   //     textNotHover.style.fontSize = pixelesText;
+//   //     textNotHover.style.fontSize = "0.2rem";
+//   //     text.style.fontSize = "0.2rem"
+//   //   });
+//   // });
+
+//   container.addEventListener('mouseout', () => {
+//     const allTexts = document.querySelectorAll('.text');
+//     allTexts.forEach(text => {
+//       text.style.fontSize = '0.5rem';
+//     });
+//   });
+// });

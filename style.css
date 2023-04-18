@@ -228,9 +228,7 @@ HEADER IMAGES
 .header div {
   display: flex;
   width: 100%;
-  /* background: rgb(1, 68, 146); */
-  /* background-color: transparent; */
-  height: 100%;
+  /* height: 100%; */
   position: relative;
   transition: width 0.5s ease;
 }
@@ -241,6 +239,7 @@ HEADER IMAGES
   background-color: #014492;
 
   display: flex;
+  width: 100%;
   /* width: 20%; */
   height: 100%;
   position: relative;
@@ -258,6 +257,33 @@ HEADER IMAGES
   opacity: 1;
   filter: contrast(120%);
 }
+.headerContainer .text {
+  font-size: 0.8rem;
+}
+
+.headerContainer:hover .text {
+  font-size: 1.2rem;
+  transition: all ease 0.5s;
+}
+
+/* .headerContainer:hover ~ .headerContainer {
+  font-size: 0.5rem;
+} */
+
+
+.headerContainer:hover ~ .headerContainer .text,
+.headerContainer:hover + .headerContainer .text,
+.header:hover .headerContainer:not(:hover) .text {
+  font-size: 0.5rem;
+  /* transition: all 0.5s ease; */
+}
+
+
+
+/* .headerContainer:hover + .headerContainer .text,
+.headerContainer:hover ~ .headerContainer .text{
+  font-size: 14px;
+} */
 
 .imgHeader {
   width: 0;
@@ -265,14 +291,17 @@ HEADER IMAGES
   flex-grow: 1;
   object-fit: cover;
   opacity: 0.8;
+
+
+ 
 }
 
 .hoverMarca {
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+  gap: 3em;
   background-color: rgb(1, 68, 146);
   background-color: rgb(1, 68, 146, 0.8);
   background-color: rgba(1, 43, 90, 0.8);
@@ -288,6 +317,13 @@ HEADER IMAGES
   transition: background-color 2s ease;
 
 }
+#hoverMarcaPropulsion{
+  justify-content: center;
+}
+#hoverEmbarcaciones{
+  justify-content: center;
+  gap: 2.5em;
+}
 .headerContainer:hover .hoverMarca {
   visibility: visible;
   background-color: rgb(1, 69, 146, 0.9);
@@ -295,10 +331,31 @@ HEADER IMAGES
   transition: background-color 1s ease;
 }
 
+.marcasConteiner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  height: 80%;
+  margin-top: 1em;
+  /* background-color: green; */
+}
+.funciones_container{
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* gap: 2em; */
+}
 
 .hoverMarca img {
   width: 40%;
   opacity: 1;
+}
+#hoverEmbarcaciones img{
+  width: 75%;
 }
 
 #clubCar {
@@ -307,24 +364,25 @@ HEADER IMAGES
 
 .funciones {
   width: 100%;
-  height: 50%;
+  /* height: 50%; */
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: center;
   justify-content: center;
   background-color: transparent;
 }
 
-#funcionesHeight {
+/* #funcionesHeight {
   height: 20%;
-
-}
+  background-color: red;
+} */
 
 .funcionesTitulo {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 1.5em;
   /* background-color: violet; */
   width: 100%;
   font-family: "Segoe UI";
@@ -345,9 +403,12 @@ HEADER IMAGES
   justify-content: center;
   text-align: center;
 }
-
+.funciones_marcas{
+  width: 100%;
+  height: 100%;
+}
 .funciones_marcas img {
-  width: 60%;
+  width: 20%;
 }
 
 .header div .text {
@@ -372,6 +433,24 @@ HEADER IMAGES
     rgb(1, 69, 147, 0.8) 100%
   );
 }
+/* ------------------------ */
+/* LOGOS  */
+#mitsubishi{
+  width: 40%;
+}
+#cummins{
+  width: 55%;
+}
+#volvo{
+  width: 50%;
+}
+#generac{
+  width: 35%
+}
+#loweBoats{
+  width: 70%;
+}
+/* ---------------------- */
 
 /* NOVEDADES   */
 /* ----------------------- */
@@ -411,7 +490,8 @@ HEADER IMAGES
 }
 
 .span_novedades {
-  line-height: 100%;
+  line-height: 2.5rem;
+  /* line-height: 100%; */
   flex-grow: 1;
   text-align: center;
   font-size: 3.2rem;
@@ -539,6 +619,7 @@ HEADER IMAGES
 
 .novedades_imgContainer:hover .hoverEffect {
   opacity: 70%;
+  transition: all ease 0.5s;
 }
 
 .novedades_imgContainer:hover .filter {
@@ -654,9 +735,7 @@ GARANTIA
 .garantia span{
   display: none;
 }
-.garantia p{
-  padding: 0.1em;
-}
+
 .garantiaColumnTwo{
   display: flex;
   width: 80%;
@@ -713,6 +792,8 @@ GARANTIA
   opacity: 1;
   width: 50%;
   box-shadow: none;
+  /* box-shadow: inset 0px 0px 10px  rgba(0, 0, 0, 0.25); */
+  /* box-shadow:  0px 0px 10px  RED; */
 }
 
 /* ------------
