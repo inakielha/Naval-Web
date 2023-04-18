@@ -130,6 +130,7 @@ nav {
 }
 .nav_info a{
   color: #014492;
+  font-size: 0.8rem;
   
 }
 
@@ -321,8 +322,8 @@ HEADER IMAGES
   justify-content: center;
 }
 #hoverEmbarcaciones{
-  justify-content: center;
-  gap: 2.5em;
+  justify-content: start;
+  gap: 2em;
 }
 .headerContainer:hover .hoverMarca {
   visibility: visible;
@@ -353,6 +354,9 @@ HEADER IMAGES
 .hoverMarca img {
   width: 40%;
   opacity: 1;
+  box-shadow: none;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
 }
 #hoverEmbarcaciones img{
   width: 75%;
@@ -439,16 +443,19 @@ HEADER IMAGES
   width: 40%;
 }
 #cummins{
-  width: 55%;
+  width: 40%;
 }
 #volvo{
-  width: 50%;
+  width: 40%;
 }
 #generac{
   width: 35%
 }
 #loweBoats{
   width: 70%;
+}
+#kongsberg{
+  width: 33%;
 }
 /* ---------------------- */
 
@@ -792,8 +799,8 @@ GARANTIA
   opacity: 1;
   width: 50%;
   box-shadow: none;
-  /* box-shadow: inset 0px 0px 10px  rgba(0, 0, 0, 0.25); */
-  /* box-shadow:  0px 0px 10px  RED; */
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
 }
 
 /* ------------
