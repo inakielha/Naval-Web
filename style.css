@@ -131,6 +131,7 @@ nav {
 .nav_info a{
   color: #014492;
   font-size: 0.8rem;
+  /* font-size: 1rem; */
   
 }
 
@@ -322,7 +323,7 @@ HEADER IMAGES
   justify-content: center;
 }
 #hoverEmbarcaciones{
-  justify-content: start;
+  justify-content: center;
   gap: 2em;
 }
 .headerContainer:hover .hoverMarca {
