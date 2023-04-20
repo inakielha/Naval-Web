@@ -303,7 +303,7 @@ HEADER IMAGES
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  gap: 3.8em;
+  gap: 3em;
   background-color: rgb(1, 68, 146);
   background-color: rgb(1, 68, 146, 0.8);
   background-color: rgba(1, 43, 90, 0.8);
@@ -321,7 +321,7 @@ HEADER IMAGES
 }
 #movilidad{
   justify-content: center;
-  gap: 2em;
+  gap: 3em;
 }
 #hoverMarcaPropulsion{
   justify-content: center;
@@ -362,6 +362,7 @@ HEADER IMAGES
   box-shadow: none;
   -webkit-filter: drop-shadow(5px 5px 5px #222);
   filter: drop-shadow(5px 5px 5px #222);
+  /* background-color: green; */
 }
 #hoverEmbarcaciones img{
   width: 75%;
@@ -369,8 +370,8 @@ HEADER IMAGES
 
 #clubCar {
   width: 30%;
-  /* background-color: green; */
 }
+
 
 .funciones {
   width: 100%;
