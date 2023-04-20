@@ -303,7 +303,7 @@ HEADER IMAGES
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  gap: 3em;
+  gap: 3.8em;
   background-color: rgb(1, 68, 146);
   background-color: rgb(1, 68, 146, 0.8);
   background-color: rgba(1, 43, 90, 0.8);
@@ -314,10 +314,14 @@ HEADER IMAGES
   top: 0;
   z-index: 1;
   visibility: hidden;
-  /* visibility: visible; */
+  visibility: visible;
   cursor: pointer;
   transition: background-color 2s ease;
 
+}
+#movilidad{
+  justify-content: center;
+  gap: 2em;
 }
 #hoverMarcaPropulsion{
   justify-content: center;
@@ -341,7 +345,7 @@ HEADER IMAGES
   gap: 2em;
   height: 80%;
   margin-top: 1em;
-  background-color: green;
+  /* background-color: green; */
 }
 .funciones_container{
   height: 90%;
@@ -365,6 +369,7 @@ HEADER IMAGES
 
 #clubCar {
   width: 30%;
+  /* background-color: green; */
 }
 
 .funciones {
