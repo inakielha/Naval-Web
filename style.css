@@ -341,7 +341,7 @@ HEADER IMAGES
   gap: 2em;
   height: 80%;
   margin-top: 1em;
-  /* background-color: green; */
+  background-color: green;
 }
 .funciones_container{
   height: 90%;
