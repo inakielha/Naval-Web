@@ -197,6 +197,11 @@ nav {
   border-radius: 50%;
   /* background-color: black; */
 }
+.buscadorContainer_wsp a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .buscadorContainer_wsp img{
   width: 100%;
 }
@@ -640,14 +645,17 @@ HEADER IMAGES
   opacity: 70%;
 }
 .spanContainer{
-  /* background-color: red; */
+  text-align: center;
+  width: 100%;
   padding: 0.5em 0;
 }
+
+
 .imgContainer span {
   font-family: Facit;
   color: #000000;
-  font-size: 1rem;
-  padding: 0.5em;
+  font-size: 0.8rem;
+  /* padding: 0.5em; */
 }
 
 button {
@@ -933,6 +941,11 @@ footer .text {
   box-shadow: 0px 0px 5px #6e6e6e;
   cursor: pointer;
 }
+.redesContainer div a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .redesContainer img{
   width: 80%;
 }
@@ -1003,7 +1016,7 @@ MEDIA QUERYS
   }
   .contenedorSection{
     /* height: 50vh; */
-    padding: 10vh 0;
+    padding: 5vh 0;
   }
   /* ------------------WSP LOGO--------------- */
   .whsContainer {
@@ -1225,7 +1238,7 @@ MEDIA QUERYS
   .headerContainer {
     display: flex;
     width: 100%;
-    height: auto;
+    height: 17vh;
     position: relative;
     transition: width 2s ease;
   }
@@ -1243,7 +1256,7 @@ MEDIA QUERYS
   }
   .imgHeader {
     width: 0;
-    height:18vh;
+    height:17vh;
   }
   .hoverMarcas{
     display: none;
@@ -1251,7 +1264,7 @@ MEDIA QUERYS
 /* -------------------NOVEDADES------------------- */
 .novedades {
   /* padding: 6em 0; */
-  padding: 10vh 0;
+  padding: 5vh 0;
 }
 .carruselContainer{
   align-items: start;
@@ -1300,10 +1313,13 @@ MEDIA QUERYS
 }
 .imgContainer span{
   width: 100%;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
+  display: flex;
   /* background-color: green; */
   min-height: 5vh;
   text-align: center;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   text-align: center;
 }
@@ -1351,6 +1367,7 @@ MEDIA QUERYS
   font-family: Facit;
   color: #000000;
   font-size: 2rem;
+  line-height: 100%;
 }
 
 #textTwo {
@@ -1359,7 +1376,7 @@ MEDIA QUERYS
   font-family: FacitBold;
   color: #014492;
   text-transform: uppercase;
-  line-height: 60px;
+  line-height: 100%;
 }
 
 #textThree {
@@ -1385,7 +1402,7 @@ MEDIA QUERYS
   align-items: center;
   justify-content: center;
   gap: 1em;
-  padding: 10vh 0;
+  padding: 5vh 0;
 }
 .garantiaColumnTwo{
   height: 100%;
@@ -1408,7 +1425,7 @@ MEDIA QUERYS
   display: none;
 }
 .garantiaContenedor{
-  height: 30vh;
+  height: 20vh;
 }
 .test{
   display: flex;
