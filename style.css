@@ -273,24 +273,12 @@ HEADER IMAGES
   transition: all ease 0.5s;
 }
 
-/* .headerContainer:hover ~ .headerContainer {
-  font-size: 0.5rem;
-} */
-
-
 .headerContainer:hover ~ .headerContainer .text,
 .headerContainer:hover + .headerContainer .text,
 .header:hover .headerContainer:not(:hover) .text {
   font-size: 0.5rem;
-  /* transition: all 0.5s ease; */
 }
 
-
-
-/* .headerContainer:hover + .headerContainer .text,
-.headerContainer:hover ~ .headerContainer .text{
-  font-size: 14px;
-} */
 
 .imgHeader {
   width: 0;
@@ -1261,6 +1249,21 @@ MEDIA QUERYS
   .hoverMarcas{
     display: none;
   }
+
+  .headerContainer .text {
+    font-size: 1.2rem;
+  }
+  
+  .headerContainer:hover .text {
+    font-size: 1.2rem;
+    transition: none;
+  }
+  
+  .headerContainer:hover ~ .headerContainer .text,
+  .headerContainer:hover + .headerContainer .text,
+  .header:hover .headerContainer:not(:hover) .text {
+    font-size: 1.2rem;
+  }
 /* -------------------NOVEDADES------------------- */
 .novedades {
   /* padding: 6em 0; */
@@ -1304,6 +1307,9 @@ MEDIA QUERYS
 .imgContainer button{
   width: 100%;
   font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .spanContainer{
   width: 100%;
@@ -1387,7 +1393,9 @@ MEDIA QUERYS
   display: none;
 }
 #btnMobile{
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 .yates_imgContainer{
