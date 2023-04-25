@@ -1278,18 +1278,28 @@ MEDIA QUERYS
     gap: 1em;
     width: 80%;
   }
+  .card{
+    /* background-color: red; */
+    /* min-height: 50vh; */
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
   .carruselContainer .imgContainer {
     text-align: center;
     justify-content: start;
     align-items: flex-start;
-    height: 25vh;
+    /* min-height: 25vh; */
+    height: 100%;
   }
   .novedades_imgContainer {
     width: 100%;
     /* background-color: red; */
   }
   .novedades_imgContainer img {
-    height: 100%;
+    height: 20vh;
   }
   .imgContainer button {
     width: 100%;
@@ -1310,7 +1320,6 @@ MEDIA QUERYS
     display: flex;
     /* background-color: green; */
     min-height: 5vh;
-    text-align: center;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -1419,7 +1428,7 @@ MEDIA QUERYS
     display: none;
   }
   .garantiaContenedor {
-    height: 15vh;
+    height: 20vh;
   }
   .test {
     display: flex;
