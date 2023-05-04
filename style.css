@@ -640,7 +640,7 @@ HEADER IMAGES
 
 button {
   background-color: #014492;
-  padding: 0.2em 0;
+  padding: 0.5em 0;
   border: none;
   font-family: FacitBold;
   color: #ffffff;
@@ -1516,9 +1516,8 @@ MEDIA QUERYS
   }
 
   .garantiaContenedor {
-    /* height: 50vh; */
     width: 100%;
-    /* background-color: red; */
+    box-shadow: 0 0 1.5px rgba(0, 0, 0, 0.534);
   }
 
   .garantiaContenedor:hover {
@@ -1568,17 +1567,24 @@ MEDIA QUERYS
     flex-direction: column;
     align-items: start;
     justify-content: start;
+    padding: 0.5em 0;
   }
   .solucionesContenido .yates_imgContainer{
     align-self: self-start;
+    display: flex;
     height: 40vh;
     width: 60vw;
+    box-shadow: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.534);
   }
-
+  
   .solucionesContenido .yates_imgContainer img{
     object-fit: cover;
     height: 100%;
   }
+
   .mobileArrows{
     display: flex;
     align-items: center;
