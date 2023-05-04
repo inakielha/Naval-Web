@@ -823,7 +823,7 @@ SOLUCIONES
   display: flex;
   align-items: start;
   justify-content: start;
-  width: 800%;
+  width: 807.2%;
   height: 100%;
   transition: transform 0.5s ease-in-out;
 }
@@ -1522,7 +1522,7 @@ MEDIA QUERYS
   }
 
   .garantiaContenedor:hover {
-    transform: scale(1.05);
+    transform: none;
   }
 
   .garantiaContenedor img {
