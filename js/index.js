@@ -84,12 +84,15 @@ const imagenes = document.querySelectorAll("#soluciones .carruselSoluciones .sol
 let contador = 0;
 const screenWidth = window.screen.width
 const tamano = imagenes[0].clientWidth;
+console.log(screenWidth)
 
 btnPost.addEventListener("click", () => {
   if (contador >= (imagenes.length) - 1) return;
   carouselSoluciones.style.transition = "transform 0.5s ease-in-out";
   contador++;
   carouselSoluciones.style.transform = `translateX(-${100 * contador}vw)`;
+  console.log("screen width",screenWidth* contador)
+  console.log("vw",100 * contador)
 });
 
 btnAnt.addEventListener("click", () => {
@@ -97,6 +100,8 @@ btnAnt.addEventListener("click", () => {
   carouselSoluciones.style.transition = "transform 0.5s ease-in-out";
   contador--;
   carouselSoluciones.style.transform = `translateX(-${100 * contador}vw)`;
+  console.log("screen width",screenWidth* contador)
+  console.log("vw",100 * contador)
 });
 
 
@@ -111,10 +116,6 @@ const texto = document.querySelector('#solucionesMobile .mobileDescription span'
 let todosTextos = ["Naval 14, construcción de patrulla costera","Embarcaciones de rescate de personas","Asalto e intercepción anti-drogas","Vehículos de aplicaciones especiales", "Búsqueda y rescate oceánico", "Patrullas de vehículos eléctricos","Batallón de Ingenieros Anfibios","Polaris Militar"]
 
 let contadorMob = 0;
-const screenWidthMob = window.screen.width
-const tamanoMob = imagenes[0].clientWidth;
-
-carouselSolucionesMob.style.transform = `translateX(-${screenWidthMob * contadorMob}px)`;
 
 let numeroPixelesVivo = 0
 
