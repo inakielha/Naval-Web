@@ -80,15 +80,12 @@ const imagenes = document.querySelectorAll("#soluciones .carruselSoluciones .sol
 let contador = 0;
 const screenWidth = window.screen.width
 const tamano = imagenes[0].clientWidth;
-console.log(screenWidth)
 
 btnPost.addEventListener("click", () => {
   if (contador >= (imagenes.length) - 1) return;
   carouselSoluciones.style.transition = "transform 0.5s ease-in-out";
   contador++;
   carouselSoluciones.style.transform = `translateX(-${12.5 * contador}%)`;
-  console.log("screen width",screenWidth* contador)
-  console.log("vw",100 * contador)
 });
 
 btnAnt.addEventListener("click", () => {
@@ -96,8 +93,6 @@ btnAnt.addEventListener("click", () => {
   carouselSoluciones.style.transition = "transform 0.5s ease-in-out";
   contador--;
   carouselSoluciones.style.transform = `translateX(-${12.5 * contador}%)`;
-  console.log("screen width",screenWidth* contador)
-  console.log("vw",100 * contador)
 });
 
 
@@ -115,18 +110,25 @@ let contadorMob = 0;
 
 let numeroPixelesVivo = 0
 
+// CLONAR LOS PRIMEROS Y ULTIMOS ELEMENTOS 
+// const firstClone = imagenesMob[0].cloneNode(true);
+// const lastClone = imagenesMob[imagenesMob.length - 1].cloneNode(true);
+// carouselSolucionesMob.appendChild(firstClone);
+// carouselSolucionesMob.insertBefore(lastClone, imagenesMob[0]);
+
 // TOUCH 
 
 carouselSolucionesMob.addEventListener('touchstart', e => {
+  // console.log("touchStart")
   posicionInicial = e.touches[0].clientX;
 });
 
 carouselSolucionesMob.addEventListener('touchmove', e => {
+  // console.log("touchMove")
   desplazamiento = e.touches[0].clientX - posicionInicial;
-  // carruselItems.style.transform = `translateX(-${desplazamiento}px)`;
 });
 
-carrusel.addEventListener('touchend', e => {
+carouselSolucionesMob.addEventListener('touchend', e => {
   if (desplazamiento > 50) {
     btnAntMob.click();
   } else if (desplazamiento < -50) {
@@ -139,17 +141,17 @@ carrusel.addEventListener('touchend', e => {
 // TOUCH END 
 
 btnPostMob.addEventListener("click", () => {
-  console.log("entre")
   if (contadorMob >= imagenesMob.length - 1) return;
   contadorMob++;
 
   if(contadorMob === 1){
-    carouselSolucionesMob.style.transform = `translateX(-${66 * contadorMob}vw)`;
+    carouselSolucionesMob.style.transform = `translateX(-${12.5 * contadorMob}%)`;
     numeroPixelesVivo = 66
     
   } else{
     numeroPixelesVivo += 66
-    carouselSolucionesMob.style.transform = `translateX(-${numeroPixelesVivo }vw)`;
+    // carouselSolucionesMob.style.transform = `translateX(-${numeroPixelesVivo }vw)`;
+    carouselSolucionesMob.style.transform = `translateX(-${12.5 * contadorMob }%)`;
   }
   texto.classList.add("animacionTexto")
   setTimeout(function() {
@@ -166,7 +168,7 @@ btnAntMob.addEventListener("click", () => {
   if (contadorMob <= 0) return;
   contadorMob--;
   numeroPixelesVivo = numeroPixelesVivo - 66
-  carouselSolucionesMob.style.transform = `translateX(-${numeroPixelesVivo }vw)`;
+  carouselSolucionesMob.style.transform = `translateX(-${12.5 * contadorMob }%)`;
   texto.classList.add("animacionTexto")
   setTimeout(function() {
     texto.textContent = todosTextos[contadorMob];
@@ -189,17 +191,42 @@ const novTexto = document.querySelector('#novedadesMob .mobileDescription span')
 let novContadorMob = 0;
 let novNumeroPixelesVivo = 0
 
+// TOUCH 
+
+carouselNovedadesMob.addEventListener('touchstart', e => {
+  posicionInicial = e.touches[0].clientX;
+});
+
+carouselNovedadesMob.addEventListener('touchmove', e => {
+  desplazamiento = e.touches[0].clientX - posicionInicial;
+});
+
+carouselNovedadesMob.addEventListener('touchend', e => {
+  if (desplazamiento > 50) {
+    novBtnAntMob.click();
+  } else if (desplazamiento < -50) {
+    novBtnPostMob.click();
+  }
+  posicionInicial = 0;
+  desplazamiento = 0;
+});
+// TOUCH END 
+
 novBtnPostMob.addEventListener("click", () => {
   if (novContadorMob >= novImagenesMob.length - 1) return;
   novContadorMob++;
 
   if(novContadorMob === 1){
-    carouselNovedadesMob.style.transform = `translateX(-${66 * novContadorMob}vw)`;
+    // carouselNovedadesMob.style.transform = `translateX(-${66 * novContadorMob}vw)`;
+    carouselNovedadesMob.style.transform = `translateX(-${12.5 * novContadorMob }%)`;
+
     novNumeroPixelesVivo = 66
     
   } else{
     novNumeroPixelesVivo += 66
-    carouselNovedadesMob.style.transform = `translateX(-${novNumeroPixelesVivo }vw)`;
+    // carouselNovedadesMob.style.transform = `translateX(-${novNumeroPixelesVivo }vw)`;
+    carouselNovedadesMob.style.transform = `translateX(-${12.5 * novContadorMob }%)`;
+
   }
   novTexto.classList.add("animacionTexto")
   setTimeout(function() {
@@ -216,7 +243,7 @@ novBtnAntMob.addEventListener("click", () => {
   if (novContadorMob <= 0) return;
   novContadorMob--;
   novNumeroPixelesVivo = novNumeroPixelesVivo - 66
-  carouselNovedadesMob.style.transform = `translateX(-${novNumeroPixelesVivo }vw)`;
+  carouselNovedadesMob.style.transform = `translateX(-${12.5 * novContadorMob }%)`;
   novTexto.classList.add("animacionTexto")
   setTimeout(function() {
     novTexto.textContent = todosTextosNovedades[novContadorMob];

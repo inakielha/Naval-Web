@@ -1095,8 +1095,8 @@ MEDIA QUERYS
   .buscadorContainer_wsp img {
     border-radius: 50%;
     box-shadow: none;
-    -webkit-filter: drop-shadow(5px 5px 5px #222);
-    filter: drop-shadow(5px 5px 5px #222);
+    -webkit-filter: drop-shadow(2px 2px 2px #222);
+    filter: drop-shadow(2px 2px 2px #222);
 
     /* background-color: #ccc; */
     object-fit: cover;
@@ -1517,7 +1517,7 @@ MEDIA QUERYS
 
   .garantiaContenedor {
     width: 100%;
-    box-shadow: 0 0 1.5px rgba(0, 0, 0, 0.534);
+    box-shadow: 0 0 1.5px rgba(0, 0, 0, 0.411);
   }
 
   .garantiaContenedor:hover {
@@ -1577,7 +1577,7 @@ MEDIA QUERYS
     box-shadow: none;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.534);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.37);
   }
   
   .solucionesContenido .yates_imgContainer img{
