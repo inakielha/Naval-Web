@@ -85,19 +85,18 @@ let contador = 0;
 const screenWidth = window.screen.width
 const tamano = imagenes[0].clientWidth;
 
-carouselSoluciones.style.transform = `translateX(-${screenWidth * contador}px)`;
 btnPost.addEventListener("click", () => {
   if (contador >= (imagenes.length) - 1) return;
   carouselSoluciones.style.transition = "transform 0.5s ease-in-out";
   contador++;
-  carouselSoluciones.style.transform = `translateX(-${screenWidth * contador}px)`;
+  carouselSoluciones.style.transform = `translateX(-${100 * contador}vw)`;
 });
 
 btnAnt.addEventListener("click", () => {
   if (contador <= 0) return;
   carouselSoluciones.style.transition = "transform 0.5s ease-in-out";
   contador--;
-  carouselSoluciones.style.transform = `translateX(-${screenWidth * contador}px)`;
+  carouselSoluciones.style.transform = `translateX(-${100 * contador}vw)`;
 });
 
 

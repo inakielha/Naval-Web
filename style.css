@@ -787,12 +787,12 @@ GARANTIA
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 100%;
 }
 
 .marca img {
   opacity: 1;
-  width: 100%;
+  width: 50%;
   box-shadow: none;
   -webkit-filter: drop-shadow(5px 5px 5px #222);
   filter: drop-shadow(5px 5px 5px #222);
