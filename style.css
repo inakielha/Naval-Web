@@ -1532,8 +1532,7 @@ MEDIA QUERYS
   }
   .marca img {
     height: auto;
-    /* opacity: 1; */
-    width: 50%;
+    width: 40%;
   }
   /* -----------------Soluciones------------ */
   #soluciones{
