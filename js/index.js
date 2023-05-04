@@ -90,7 +90,7 @@ btnPost.addEventListener("click", () => {
   if (contador >= (imagenes.length) - 1) return;
   carouselSoluciones.style.transition = "transform 0.5s ease-in-out";
   contador++;
-  carouselSoluciones.style.transform = `translateX(-${100 * contador}vw)`;
+  carouselSoluciones.style.transform = `translateX(-${98.7 * contador}vw)`;
   console.log("screen width",screenWidth* contador)
   console.log("vw",100 * contador)
 });
