@@ -823,7 +823,7 @@ SOLUCIONES
   display: flex;
   align-items: start;
   justify-content: start;
-  width: 807.2%;
+  width: 800%;
   height: 100%;
   transition: transform 0.5s ease-in-out;
 }
