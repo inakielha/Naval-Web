@@ -7,10 +7,6 @@ document.querySelector(".closeContainer").addEventListener("click", () => {
     document.querySelector(".nav_mobile").classList.toggle("show")
 })
 
-// document.querySelectorAll("a").addEventListener("click", () => {
-//   console.log("q c yo")
-//   document.querySelector(".nav_mobile").classList.toggle("show")
-// })
 const aElements = document.querySelectorAll(".nav_mobile li a")
 aElements.forEach((a) => {
   a.addEventListener("click", () => {
@@ -119,7 +115,31 @@ let contadorMob = 0;
 
 let numeroPixelesVivo = 0
 
+// TOUCH 
+
+carouselSolucionesMob.addEventListener('touchstart', e => {
+  posicionInicial = e.touches[0].clientX;
+});
+
+carouselSolucionesMob.addEventListener('touchmove', e => {
+  desplazamiento = e.touches[0].clientX - posicionInicial;
+  // carruselItems.style.transform = `translateX(-${desplazamiento}px)`;
+});
+
+carrusel.addEventListener('touchend', e => {
+  if (desplazamiento > 50) {
+    btnAntMob.click();
+  } else if (desplazamiento < -50) {
+    btnPostMob.click();
+  }
+  // carruselItems.style.transform = 'translateX(0)';
+  posicionInicial = 0;
+  desplazamiento = 0;
+});
+// TOUCH END 
+
 btnPostMob.addEventListener("click", () => {
+  console.log("entre")
   if (contadorMob >= imagenesMob.length - 1) return;
   contadorMob++;
 
