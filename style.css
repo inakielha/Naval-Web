@@ -452,7 +452,10 @@ HEADER IMAGES
   width: 33%;
 }
 /* ---------------------- */
-
+/* NOVEDADES MOBILE  */
+#novedadesMob{
+  display: none;
+}
 /* NOVEDADES   */
 /* ----------------------- */
 .novedades {
@@ -602,10 +605,9 @@ HEADER IMAGES
   left: 50%;
   margin-left: -50%;
   bottom: 0;
-  z-index: 1;
+  /* z-index: 1; */
   padding: 5em 0 1em 0;
   cursor: pointer;
-  z-index: 1;
   background: linear-gradient(
     180deg,
     rgb(237, 240, 242, 0.01) 0%,
@@ -785,12 +787,12 @@ GARANTIA
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 80%;
 }
 
 .marca img {
   opacity: 1;
-  width: 50%;
+  width: 100%;
   box-shadow: none;
   -webkit-filter: drop-shadow(5px 5px 5px #222);
   filter: drop-shadow(5px 5px 5px #222);
@@ -799,15 +801,51 @@ GARANTIA
 /* ------------
 SOLUCIONES
 ----------- */
-.soluciones_textContainer {
+#solucionesMobile{
+  display: none;
+}
+#soluciones{
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: start;
+}
+.carruselSoluciones{
   width: 100%;
-  /* background-color: red; */
-  /* padding-left: 2em; */
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.soluciones_textContainer div {
-  width: 90%;
-  /* background-color: blue; */
+#carruselSoluciones{
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  width: 800%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.soluciones_textContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* height: 100%; */
+    transition: transform 0.5s ease-in-out;
+}
+.solucionesContenido{
+  width: 80%;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+}
+
+.solucionesContenido div{
+  width: 100%;
 }
 
 /* ------------------
@@ -969,6 +1007,16 @@ KEYFRAMES
     font-weight: 500;
   }
 }
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 /* ---------------------------
 MEDIA QUERYS
 -------------------------- */
@@ -977,15 +1025,6 @@ MEDIA QUERYS
   html {
     font-size: 25px;
   }
-  /* .novedades{
-    padding: 10vh 0;
-  }
-  .garantiaSection{
-    padding: 10vh 0;
-  }
-  .contenedorSection {
-    padding: 10vh 0;
-  } */
 }
 @media only screen and (max-width: 640px) {
   body {
@@ -1257,6 +1296,9 @@ MEDIA QUERYS
     font-size: 1.2rem;
   }
   /* -------------------NOVEDADES------------------- */
+  #novedades{
+    display: none;
+  }
   .novedades {
     /* padding: 6em 0; */
     padding: 5vh 0;
@@ -1350,7 +1392,30 @@ MEDIA QUERYS
     border-color: #014492;
     right: 1.5%;
   }
+  /* NOVEDADES MOBILE  */
+  #novedadesMob{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    overflow: hidden;
+  }
+  #novedadesMob .solucionesMobileText{
+    padding-bottom: 1em;
+  }
+  #carruselNovedades{
+    overflow: hidden;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding-left: 1em;
+    width: 530%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    gap: 1em;
+  }
 
+ 
   /* ----------------YATES---------------------- */
   .yates {
     gap: 1em;
@@ -1414,37 +1479,31 @@ MEDIA QUERYS
     padding: 5vh 0;
   }
   .garantiaColumnTwo {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     gap: 1em;
   }
   .garantia {
     display: flex;
     width: 80%;
-    flex-direction: row;
+    flex-direction: column;
     text-align: start;
     justify-content: start;
     gap: 0.5em;
     font-size: 0.2rem;
-  }
-  .garantia span {
-    display: block;
-    /* background-color: green; */
-  }
-  .garantia p {
-    display: none;
-  }
-  .garantiaContenedor {
-    height: 20vh;
   }
   .test {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
     align-self: center;
-    gap: 1em;
     height: 100%;
+  }
+  .garantiaContenedor {
+    height: 9vh;
   }
   .test button {
     width: 100%;
@@ -1459,6 +1518,7 @@ MEDIA QUERYS
   .garantiaContenedor {
     /* height: 50vh; */
     width: 100%;
+    /* background-color: red; */
   }
 
   .garantiaContenedor:hover {
@@ -1466,26 +1526,159 @@ MEDIA QUERYS
   }
 
   .garantiaContenedor img {
-    opacity: 50%;
     object-fit: cover;
     height: 100%;
+    /* opacity: 1; */
   }
   .marca img {
     height: auto;
-    opacity: 1;
-    width: 70%;
+    /* opacity: 1; */
+    width: 50%;
   }
-
   /* -----------------Soluciones------------ */
-  .soluciones_textContainer {
-    text-align: center;
-  }
-  .soluciones_textContainer button {
+  #soluciones{
     display: none;
   }
-  .soluciones_textContainer div {
-    width: 100%;
+  /* SOLUCIONES MOBILE  */
+  #solucionesMobile{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    overflow: hidden;
   }
+  #carruselSoluciones{
+      overflow: hidden;
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      padding-left: 1em;
+      width: 530%;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+      gap: 1em;
+  }
+  .solucionesMobileText{
+    /* background-color: red; */
+    align-self: center;
+    width: 80%;
+    text-align: start;
+  }
+  .solucionesContenido{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+  .solucionesContenido .yates_imgContainer{
+    align-self: self-start;
+    height: 40vh;
+    width: 60vw;
+  }
+
+  .solucionesContenido .yates_imgContainer img{
+    object-fit: cover;
+    height: 100%;
+  }
+  .mobileArrows{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+   .mobileDescription{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    /* width: 150px; */
+    width: 100px;
+    width: 100%;
+    /* word-break: break-all; */
+    overflow: hidden;
+    position: relative;
+    line-height: 1.2em;
+    max-height: 2.4em;
+  }
+  #solucionesTxt{
+    position: absolute;
+    bottom: 22%;
+    top: -130%;
+    left: 600%;
+    /* color: red; */
+    z-index: 10;
+  }
+  .mobileArrows span{
+    position: relative;
+    z-index: 1;
+    /* background-color: green; */
+  }
+  .mobileArrows .mobileDescription::after {
+    content: "...";
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white 90%);
+  }
+  .soluciones_cardInfo{
+    align-self: center;
+    width: 80%;
+  }
+  .solucionesMob_carruselTrigger{
+    width: 100%;
+    padding: 0.5em 0;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .solucionesMob_carruselTrigger span{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+  }
+  .animacionTexto{
+    animation: fadeOut 0.5s ease-in-out forwards;
+  }
+  .soluciones_btnContainer{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    /* background-color: red; */
+  }
+  .arrowContainer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    /* background-color: green; */
+    gap: 2em;
+  }
+  .novedades_arrows {
+    position: relative;
+    top: auto;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .prev {
+    border-bottom: 6px solid;
+    border-left: 6px solid;
+    border-color: #014492;
+    left: auto;
+    align-self: auto;
+    /* transform: translateY(-50%) rotate(45deg); */
+    transform: translateY(0) rotate(45deg);
+    /* transform: translateY(0) rotate(-135deg); */
+    }
+
+  .next {
+    border-bottom: 6px solid;
+    border-left: 6px solid;
+    border-color: #014492;
+    left: auto;
+    transform: translateY(0) rotate(-135deg);
+  }
+
   /* -------------------Footer------------------------- */
   .footerContainer {
     flex-direction: column;

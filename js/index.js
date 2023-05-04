@@ -39,8 +39,8 @@ window.addEventListener('scroll', function () {
 
 // CARRUSEL
 const carouselSlide = document.querySelector(".carruselContainer");
-const prevBtn = document.querySelector(".prev");
-const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector("#prev");
+const nextBtn = document.querySelector("#next");
 const images = document.querySelectorAll(".carruselContainer .carruselContainerTest");
 
 let counter = 0;
@@ -49,7 +49,6 @@ const size = images[0].clientWidth;
 carouselSlide.style.transform = `translateX(-${size * counter}px)`;
 
 nextBtn.addEventListener("click", () => {
-    // console.log(size)
   if (counter >= images.length - 1) return;
   carouselSlide.style.transition = "transform 0.5s ease-in-out";
   counter++;
@@ -76,28 +75,134 @@ carouselSlide.addEventListener("transitionend", () => {
   }
 });
 
+// CARRUSEL SOLUCIONES 
+const carouselSoluciones = document.querySelector("#soluciones .carruselSoluciones");
+const btnAnt = document.querySelector("#btnPrev");
+const btnPost = document.querySelector("#btnNext");
+const imagenes = document.querySelectorAll("#soluciones .carruselSoluciones .soluciones_textContainer");
 
-// CAMBIAR TEXTO DE IMAGENES ON HOVER  
-// const imageContainers = document.querySelectorAll('.headerContainer');
-// const otherTexts = document.querySelectorAll('.headerContainer:not(:hover)');
+let contador = 0;
+const screenWidth = window.screen.width
+const tamano = imagenes[0].clientWidth;
 
-// imageContainers.forEach(container => {
-//   // container.addEventListener('mouseover', () => {
-//   //   currentText.style.fontSize = '200px';
-//   //   let pixelesText;
-//   //   otherTexts.length === 5 ? pixelesText = "2rem" : pixelesText = "0.5rem"
-//   //   otherTexts.forEach(text => {
-//   //     const textNotHover = text.querySelector('.text');
-//   //     textNotHover.style.fontSize = pixelesText;
-//   //     textNotHover.style.fontSize = "0.2rem";
-//   //     text.style.fontSize = "0.2rem"
-//   //   });
-//   // });
+carouselSoluciones.style.transform = `translateX(-${screenWidth * contador}px)`;
+btnPost.addEventListener("click", () => {
+  if (contador >= (imagenes.length) - 1) return;
+  carouselSoluciones.style.transition = "transform 0.5s ease-in-out";
+  contador++;
+  carouselSoluciones.style.transform = `translateX(-${screenWidth * contador}px)`;
+});
 
-//   container.addEventListener('mouseout', () => {
-//     const allTexts = document.querySelectorAll('.text');
-//     allTexts.forEach(text => {
-//       text.style.fontSize = '0.5rem';
-//     });
-//   });
-// });
+btnAnt.addEventListener("click", () => {
+  if (contador <= 0) return;
+  carouselSoluciones.style.transition = "transform 0.5s ease-in-out";
+  contador--;
+  carouselSoluciones.style.transform = `translateX(-${screenWidth * contador}px)`;
+});
+
+
+// CARRUSEL SOLUCIONES MOBILE
+const carouselSolucionesMob = document.querySelector(".mobilejs");
+const btnAntMob = document.querySelector("#btnPrevMob");
+const btnPostMob = document.querySelector("#btnNextMob");
+const imagenesMob = document.querySelectorAll(".mobilejs .soluciones_textContainer");
+const texto = document.querySelector('#solucionesMobile .mobileDescription span');
+// texto.textContent = 'Este es el nuevo texto';
+
+let todosTextos = ["Naval 14, construcción de patrulla costera","Embarcaciones de rescate de personas","Asalto e intercepción anti-drogas","Vehículos de aplicaciones especiales", "Búsqueda y rescate oceánico", "Patrullas de vehículos eléctricos","Batallón de Ingenieros Anfibios","Polaris Militar"]
+
+let contadorMob = 0;
+const screenWidthMob = window.screen.width
+const tamanoMob = imagenes[0].clientWidth;
+
+carouselSolucionesMob.style.transform = `translateX(-${screenWidthMob * contadorMob}px)`;
+
+let numeroPixelesVivo = 0
+
+btnPostMob.addEventListener("click", () => {
+  if (contadorMob >= imagenesMob.length - 1) return;
+  contadorMob++;
+
+  if(contadorMob === 1){
+    carouselSolucionesMob.style.transform = `translateX(-${66 * contadorMob}vw)`;
+    numeroPixelesVivo = 66
+    
+  } else{
+    numeroPixelesVivo += 66
+    carouselSolucionesMob.style.transform = `translateX(-${numeroPixelesVivo }vw)`;
+  }
+  texto.classList.add("animacionTexto")
+  setTimeout(function() {
+    texto.textContent = todosTextos[contadorMob];
+    // parrafo.textContent = "Texto cambiado";
+    texto.classList.remove("animacionTexto");
+    // parrafo.classList.add
+  },500)
+  // console.log(numeroPixelesVivo)
+
+});
+
+btnAntMob.addEventListener("click", () => {
+  if (contadorMob <= 0) return;
+  contadorMob--;
+  numeroPixelesVivo = numeroPixelesVivo - 66
+  carouselSolucionesMob.style.transform = `translateX(-${numeroPixelesVivo }vw)`;
+  texto.classList.add("animacionTexto")
+  setTimeout(function() {
+    texto.textContent = todosTextos[contadorMob];
+    // parrafo.textContent = "Texto cambiado";
+    texto.classList.remove("animacionTexto");
+    // parrafo.classList.add
+  },500)
+  // console.log(numeroPixelesVivo)
+});
+
+// CARRUSEL NOVEDADES MOBILE
+const carouselNovedadesMob = document.querySelector(".novedadjs");
+const novBtnAntMob = document.querySelector("#novedPrevMob");
+const novBtnPostMob = document.querySelector("#novedNextMob");
+const novImagenesMob = document.querySelectorAll(".novedadjs .soluciones_textContainer");
+const novTexto = document.querySelector('#novedadesMob .mobileDescription span');
+
+ let todosTextosNovedades = ["Ara Bouchard","Nuevo Concesionario Polaris Córdoba","Top Sales Awards Latinoamerica","Ara Bouchard", "Nuevo Concesionario Polaris Córdoba", "Top Sales Awards Latinoamerica","imagen test","imagen test"]
+
+let novContadorMob = 0;
+let novNumeroPixelesVivo = 0
+
+novBtnPostMob.addEventListener("click", () => {
+  if (novContadorMob >= novImagenesMob.length - 1) return;
+  novContadorMob++;
+
+  if(novContadorMob === 1){
+    carouselNovedadesMob.style.transform = `translateX(-${66 * novContadorMob}vw)`;
+    novNumeroPixelesVivo = 66
+    
+  } else{
+    novNumeroPixelesVivo += 66
+    carouselNovedadesMob.style.transform = `translateX(-${novNumeroPixelesVivo }vw)`;
+  }
+  novTexto.classList.add("animacionTexto")
+  setTimeout(function() {
+    novTexto.textContent = todosTextosNovedades[novContadorMob];
+    // parrafo.textContent = "Texto cambiado";
+    novTexto.classList.remove("animacionTexto");
+    // parrafo.classList.add
+  },500)
+  // console.log(numeroPixelesVivo)
+
+});
+
+novBtnAntMob.addEventListener("click", () => {
+  if (novContadorMob <= 0) return;
+  novContadorMob--;
+  novNumeroPixelesVivo = novNumeroPixelesVivo - 66
+  carouselNovedadesMob.style.transform = `translateX(-${novNumeroPixelesVivo }vw)`;
+  novTexto.classList.add("animacionTexto")
+  setTimeout(function() {
+    novTexto.textContent = todosTextosNovedades[novContadorMob];
+    // parrafo.textContent = "Texto cambiado";
+    novTexto.classList.remove("animacionTexto");
+    // parrafo.classList.add
+  },500)
+  // console.log(numeroPixelesVivo)
+});
