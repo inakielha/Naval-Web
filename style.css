@@ -247,7 +247,6 @@ HEADER IMAGES
 
   display: flex;
   width: 100%;
-  /* width: 20%; */
   height: 100%;
   position: relative;
   transition: width 2s ease;
@@ -297,6 +296,7 @@ HEADER IMAGES
   background-color: rgba(1, 43, 90, 0.8);
   width: 100%;
   position: absolute;
+  position: relative;
   left: 0;
   margin-left: -100%;
   top: 0;
