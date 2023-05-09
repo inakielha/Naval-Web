@@ -241,10 +241,7 @@ HEADER IMAGES
 }
 
 .headerContainer {
-  /* background-color: rgb(1, 68, 146, 0.8);
-  background-color: rgba(1, 43, 90, 0.8); */
   background-color: #014492;
-
   display: flex;
   width: 100%;
   height: 100%;
@@ -261,6 +258,7 @@ HEADER IMAGES
   cursor: pointer;
   opacity: 1;
   filter: contrast(120%);
+  z-index: 1;
 }
 .headerContainer .text {
   font-size: 0.8rem;
@@ -283,6 +281,34 @@ HEADER IMAGES
   flex-grow: 1;
   object-fit: cover;
   opacity: 0.8;
+  z-index: 1;
+}
+
+
+
+
+.header div .text {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -50%;
+  bottom: 0;
+  text-align: center;
+  font-family: "Segoe UI",FacitBold,"Open Sans";
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 3.5em 0 1em 0;
+  cursor: pointer;
+  z-index: 2;
+  background: linear-gradient(
+    180deg,
+    rgb(237, 240, 242, 0.01) 0%,
+    rgb(194, 217, 233, 0.02) 18%,
+    rgb(0, 116, 194, 0.6) 80%,
+    rgb(1, 69, 147, 0.8) 100%
+  );
+  /* background-color: red; */
 }
 
 .hoverMarca {
@@ -290,19 +316,17 @@ HEADER IMAGES
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  gap: 3em;
   background-color: rgb(1, 68, 146);
   background-color: rgb(1, 68, 146, 0.8);
   background-color: rgba(1, 43, 90, 0.8);
   width: 100%;
   position: absolute;
-  position: relative;
+  gap: 3em;
   left: 0;
   margin-left: -100%;
   top: 0;
   z-index: 1;
   visibility: hidden;
-  /* visibility: visible; */
   cursor: pointer;
   transition: background-color 2s ease;
 }
@@ -319,8 +343,8 @@ HEADER IMAGES
 }
 .headerContainer:hover .hoverMarca {
   visibility: visible;
-  background-color: rgb(1, 69, 146, 0.9);
-  background-color: rgba(1, 43, 90, 0.9);
+  /* background-color: rgb(1, 69, 146, 0.9); */
+  /* background-color: rgba(1, 43, 90, 0.9); */
   transition: background-color 1s ease;
 }
 
@@ -342,13 +366,25 @@ HEADER IMAGES
   justify-content: center;
   /* gap: 2em; */
 }
-
+.imagenLink{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 1;
+}
+.imagenLink img{
+  z-index: 1;
+}
 .hoverMarca img {
   width: 40%;
   opacity: 1;
   box-shadow: none;
   -webkit-filter: drop-shadow(5px 5px 5px #222);
   filter: drop-shadow(5px 5px 5px #222);
+  /* z-index: 5; */
   /* background-color: green; */
 }
 #hoverEmbarcaciones img {
@@ -368,11 +404,6 @@ HEADER IMAGES
   justify-content: center;
   background-color: transparent;
 }
-
-/* #funcionesHeight {
-  height: 20%;
-  background-color: red;
-} */
 
 .funcionesTitulo {
   display: flex;
@@ -408,29 +439,6 @@ HEADER IMAGES
   width: 20%;
 }
 
-.header div .text {
-  width: 100%;
-  position: absolute;
-  left: 50%;
-  margin-left: -50%;
-  bottom: 0;
-  text-align: center;
-  font-family: "Segoe UI",FacitBold,"Open Sans";
-  /* font-family: "Open Sans"; */
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #ffffff;
-  padding: 5em 0 1em 0;
-  cursor: pointer;
-  z-index: 2;
-  background: linear-gradient(
-    180deg,
-    rgb(237, 240, 242, 0.01) 0%,
-    rgb(194, 217, 233, 0.02) 18%,
-    rgb(0, 116, 194, 0.6) 80%,
-    rgb(1, 69, 147, 0.8) 100%
-  );
-}
 /* ------------------------ */
 /* LOGOS  */
 #mitsubishi {

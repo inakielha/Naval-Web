@@ -88,49 +88,57 @@
             <div class="headerContainer">
                 <span class="text">PROPULSIÒN FUERA DE BORDA </span>
                 <img class="imgHeader" id="propulsion" src="./assets/mercury.jpg" alt="mercury">
-                <a href="https://www.youtube.com/" class="hoverMarca" id="hoverMarcaPropulsion">
-                    <img class="hoverMarcas" id="hoverimg" src="./assets/mercury-logo.svg" alt="mercury">
-                </a>
+                <div class="hoverMarca" id="hoverMarcaPropulsion">
+                    <a class="imagenLink" href="{{route('mercury')}}">
+                        <img class="hoverMarcas" id="hoverimg" src="./assets/mercury-logo.svg" alt="mercury">
+                    </a>
+                </div>
             </div>
             <div class="headerContainer">
-                <span class="text"> PROPULSIÒN INTERNA</span>
                 <img class="imgHeader" id="interna" src="./assets/jeanneau.jpg" alt="prop interna">
-                <a href="https://www.youtube.com/" class="hoverMarca" id="hoverMarcaPropulsion">
-                    <!-- <div class="marcasConteiner"> -->
-                    <img id="mitsubishi" src="./assets/mitsubishi.svg" alt="mitsubishi">
-                    <img id="volvo" class="hoverMarcas" id="test" src="./assets/VOLVO PENTA.svg" alt="volvo">
-                    <!-- <img id="volvo" class="hoverMarcas" id="test" src="./assets/volvopenta-white.svg" alt="volvo"> -->
-                    <img id="kongsberg" src="./assets/kongsberg.svg" alt="kongsberg">
-                    <!-- </div> -->
-                </a>
+                <span class="text"> PROPULSIÒN INTERNA</span>
+                <div class="hoverMarca" id="hoverMarcaPropulsion">
+                    <a class="imagenLink" href="{{route('mitsubishi')}}">
+                        <img id="mitsubishi" src="./assets/mitsubishi.svg" alt="mitsubishi">
+                    </a>
+                    <a class="imagenLink" href="{{route('vp.prop')}}">
+                        <img id="volvo" class="hoverMarcas" id="test" src="./assets/VOLVO PENTA.svg" alt="volvo">
+                    </a>
+                    <a class="imagenLink" href="https://www.kongsberg.com/">
+                        <img id="kongsberg" src="./assets/kongsberg.svg" alt="kongsberg">
+                    </a>
+                </div>
             </div>
-
             <div class="headerContainer">
                 <span class="text">MOVILIDAD </span>
                 <img class="imgHeader" id="polaris" src="./assets/polaris.jpg" alt="polaris">
-                <a href="https://www.youtube.com/" class="hoverMarca" id="movilidad">
-                    <img class="hoverMarcas" id="polarisima" src="./assets/polaris-white.svg" alt="polaris">
-                    <img class="hoverMarcas" id="clubCar" src="./assets/car.svg" alt="club car">
-                </a>
-
+                <div class="hoverMarca" id="movilidad">
+                    <a class="imagenLink" href="{{route('polaris')}}">
+                        <img class="hoverMarcas" id="polarisima" src="./assets/polaris-white.svg" alt="polaris">
+                    </a>
+                    <a class="imagenLink" href="{{route('clubcar')}}">
+                        <img class="hoverMarcas" id="clubCar" src="./assets/car.svg" alt="club car">
+                    </a>
+                </div>
             </div>
             <div class="headerContainer">
                 <span class="text">EMBARCACIONES</span>
                 <img class="imgHeader" id="embarcaciones" src="./assets/volvo-prop.jpg" alt="embarcaciones">
-
-                <a href="https://www.youtube.com/" class="hoverMarca" id="hoverEmbarcaciones">
-                    <!-- <div class="funciones_container"> -->
-
+                <div class="hoverMarca" id="hoverEmbarcaciones">
                     <div class="funciones" id="funcionesHeight">
                         <div class="funcionesTitulo">
                             <span>EMBARCACIONES</span>
                         </div>
                         <div class="funciones_marcasContainer">
-                            <div class="funciones_marcas row"><img src="./assets/searay-white.svg" alt="seaRay">
-                            </div>
-                            <div class="funciones_marcas row"><img src="./assets/jeanneau.svg" alt="jeanneau"></div>
-                            <div class="funciones_marcas row"><img src="./assets/chiscraft-white.svg" alt="chiscraft">
-                            </div>
+                            <a href="https://www.youtube.com" class="funciones_marcas row"><img
+                                    src="./assets/searay-white.svg" alt="seaRay">
+                            </a>
+                            <a href="https://www.youtube.com" class="funciones_marcas row"><img
+                                    src="./assets/jeanneau.svg" alt="jeanneau">
+                            </a>
+                            <a href="https://www.youtube.com" class="funciones_marcas row"><img
+                                    src="./assets/chiscraft-white.svg" alt="chiscraft">
+                            </a>
                         </div>
                     </div>
                     <div class="funciones" id="funcionesHeight">
@@ -138,12 +146,15 @@
                             <span>BOTES NEUMÁTICOS</span>
                         </div>
                         <div class="funciones_marcasContainer">
-                            <div class="funciones_marcas row"><img src="./assets/williams-white.svg" alt="williams">
-                            </div>
-                            <div class="funciones_marcas row"><img src="./assets/yachtclub-white.svg" alt="yacht">
-                            </div>
-                            <div class="funciones_marcas row"><img src="./assets/zodiac-white.svg" alt="zodiac">
-                            </div>
+                            <a href="https://www.youtube.com" class="funciones_marcas row"><img
+                                    src="./assets/williams-white.svg" alt="williams">
+                            </a>
+                            <a href="https://www.youtube.com" class="funciones_marcas row"><img
+                                    src="./assets/yachtclub-white.svg" alt="yacht">
+                            </a>
+                            <a href="https://www.youtube.com" class="funciones_marcas row"><img
+                                    src="./assets/zodiac-white.svg" alt="zodiac">
+                            </a>
                         </div>
                     </div>
                     <div class="funciones" id="funcionesHeight">
@@ -151,32 +162,36 @@
                             <span>BOTES DE ALUMINIO</span>
                         </div>
                         <div class="funciones_marcasContainer">
-                            <div class="funciones_marcas row"><img src="./assets/levefort-white.svg" alt="levefort">
-                            </div>
-                            <div class="funciones_marcas row" id="loweBoats"><img src="./assets/lowe-white.svg"
-                                    alt="lowe"></div>
-                            <div class="funciones_marcas row"><img src="./assets/bostonwhaler.svg" alt=""></div>
+                            <a href="https://www.youtube.com" class="funciones_marcas row"><img
+                                    src="./assets/levefort-white.svg" alt="levefort">
+                            </a>
+                            <a href="https://www.youtube.com" class="funciones_marcas row" id="loweBoats"><img
+                                    src="./assets/lowe-white.svg" alt="lowe"></a>
+                            <a href="https://www.youtube.com" class="funciones_marcas row"><img
+                                    src="./assets/bostonwhaler.svg" alt="">
+                            </a>
                         </div>
                     </div>
-                </a>
-
-                <!-- </div> -->
-
+                </div>
             </div>
 
             <div class="headerContainer">
                 <span class="text">GENERACIÓN Y VERSÁTILES</span>
                 <img class="imgHeader" id="generacion" src="./assets/generac.jpg" alt="generacion">
-                <a href="https://www.youtube.com/" class="hoverMarca" id="hoverMarcaPropulsion">
-                    <!-- <div class="marcasConteiner"> -->
-                    <img id="generac" class="hoverMarcas" src="./assets/generac-white.svg" alt="generac">
-                    <!-- <img id= "volvo" class="hoverMarcas" src="./assets/volvopenta-white.svg" alt="volvo"> -->
-                    <img id="volvo" class="hoverMarcas" src="./assets/VOLVO PENTA.svg" alt="volvo">
-                    <img id="mitsubishi" class="hoverMarcas" src="./assets/mitsubishi.svg" alt="mitsubishi">
-                    <img id="cummins" class="hoverMarcas" src="./assets/cummins.svg" alt="cummins">
-                    <!-- </div> -->
-                </a>
-
+                <div class="hoverMarca" id="hoverMarcaPropulsion">
+                    <a class="imagenLink" href="https://www.youtube.com">
+                        <img id="generac" class="hoverMarcas" src="./assets/generac-white.svg" alt="generac">
+                    </a>
+                    <a class="imagenLink" href="https://www.youtube.com">
+                        <img id="volvo" class="hoverMarcas" src="./assets/VOLVO PENTA.svg" alt="volvo">
+                    </a>
+                    <a class="imagenLink" href="https://www.youtube.com">
+                        <img id="mitsubishi" class="hoverMarcas" src="./assets/mitsubishi.svg" alt="mitsubishi">
+                    </a>
+                    <a class="imagenLink" href="https://www.youtube.com">
+                        <img id="cummins" class="hoverMarcas" src="./assets/cummins.svg" alt="cummins">
+                    </a>
+                </div>
             </div>
         </section>
     </div>
@@ -536,7 +551,8 @@
                     <div>
                         <p id="text">NUESTRAS</p>
                         <p id="textTwo">SOLUCIONES</p>
-                        <p id="textThree">Naval 14, construcción de patrulla costera. Transporte de Pasajeros en Servicios Especiales
+                        <p id="textThree">Naval 14, construcción de patrulla costera. Transporte de Pasajeros en
+                            Servicios Especiales
                         </p>
                         <button>VER MÁS</button>
                     </div>
@@ -554,7 +570,8 @@
                     <div>
                         <p id="text">NUESTRAS</p>
                         <p id="textTwo">SOLUCIONES</p>
-                        <p id="textThree">Embarcaciones de rescate de personas. Facilidad de traslado, opciones de potencia y desarrollo mundialmente probado</p>
+                        <p id="textThree">Embarcaciones de rescate de personas. Facilidad de traslado, opciones de
+                            potencia y desarrollo mundialmente probado</p>
                         <button>VER MÁS</button>
                     </div>
                     <div class="yates_imgContainer">
@@ -570,7 +587,8 @@
                     <div>
                         <p id="text">NUESTRAS</p>
                         <p id="textTwo">SOLUCIONES</p>
-                        <p id="textThree">Embarcación Toro. Solidez estructural. Construcción totalmente soldada. Superficies transitables antideslizantes. </p>
+                        <p id="textThree">Embarcación Toro. Solidez estructural. Construcción totalmente soldada.
+                            Superficies transitables antideslizantes. </p>
                         <button>VER MÁS</button>
                     </div>
                     <div class="yates_imgContainer">
@@ -586,7 +604,8 @@
                     <div>
                         <p id="text">NUESTRAS</p>
                         <p id="textTwo">SOLUCIONES</p>
-                        <p id="textThree">Vehículos de aplicaciones especiales. Usados por el Ejército Argentino, Prefectura Naval Argentina, Bomberos Voluntarios, entre otros. </p>
+                        <p id="textThree">Vehículos de aplicaciones especiales. Usados por el Ejército Argentino,
+                            Prefectura Naval Argentina, Bomberos Voluntarios, entre otros. </p>
                         <button>VER MÁS</button>
                     </div>
                     <div class="yates_imgContainer">
@@ -602,7 +621,8 @@
                     <div>
                         <p id="text">NUESTRAS</p>
                         <p id="textTwo">SOLUCIONES</p>
-                        <p id="textThree">Búsqueda y rescate oceánico. Embarcaciones profesionales zodiac hurricane. ermirrigido aluminio 9.20 mys
+                        <p id="textThree">Búsqueda y rescate oceánico. Embarcaciones profesionales zodiac hurricane.
+                            ermirrigido aluminio 9.20 mys
                             versión consola y versión cabina.</p>
                         <button>VER MÁS</button>
                     </div>
@@ -635,7 +655,8 @@
                     <div>
                         <p id="text">NUESTRAS</p>
                         <p id="textTwo">SOLUCIONES</p>
-                        <p id="textThree">Batallón de Ingenieros Anfibios 121. Boston Whaler. Sistema de propulsión: Mercury Verado de 200 HP</p>
+                        <p id="textThree">Batallón de Ingenieros Anfibios 121. Boston Whaler. Sistema de propulsión:
+                            Mercury Verado de 200 HP</p>
                         <button>VER MÁS</button>
                     </div>
                     <div class="yates_imgContainer">
