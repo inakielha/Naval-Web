@@ -253,3 +253,29 @@ novBtnAntMob.addEventListener("click", () => {
   },500)
   // console.log(numeroPixelesVivo)
 });
+
+// BUSCADOR DIPLAY 
+const button = document.getElementsByClassName("buscadorContainer_border");
+const searchLupa = document.getElementsByClassName("lupa_input");
+const inputContainer = document.querySelector(".nav_input");
+
+button[0].addEventListener("click", () => {
+  inputContainer.classList.toggle("nav_input_visible");
+  button[0].classList.toggle("buscadorContainer_invisible");
+});
+
+// searchLupa[0].addEventListener("click", () => {
+//   inputContainer.classList.remove("nav_input_visible");
+//   button[0].classList.toggle("buscadorContainer_invisible");
+// });
+
+inputContainer.addEventListener("transitionend", () => {
+  if (inputContainer.classList.contains("visible")) {
+    inputContainer.querySelector("input").focus();
+  } else {
+    inputContainer.querySelector("input").blur();
+  }
+});
+
+
+
