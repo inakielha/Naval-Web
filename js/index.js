@@ -134,7 +134,6 @@ const imagenes = document.querySelectorAll(
 );
 
 let contador = 0;
-const screenWidth = window.screen.width;
 const tamano = imagenes[0].clientWidth;
 
 btnPost.addEventListener("click", () => {
@@ -339,4 +338,25 @@ novBtnAntMob.addEventListener("click", () => {
   }, 500);
   // console.log(numeroPixelesVivo)
 });
-
+const screenWidth = window.screen.width;
+console.log(screenWidth)
+let headerContainer = document.querySelectorAll(".headerContainer")
+let imgHeader = document.querySelectorAll("#header .imgHeader")
+let hoverMarca = document.querySelector("#header .hoverMarca")
+console.log(headerContainer)
+// IMAGENES HEADER MOBILE 
+if(screenWidth < 640){
+  for (let i = 0; i < headerContainer.length; i++) {
+    headerContainer[i].addEventListener("click", () => {
+      headerContainer[i].classList.toggle("headerContainerHover")
+      imgHeader[i].classList.toggle("headerContainerHoverImgHeader")
+      headerContainer.forEach((el)=> {
+        if (el !== headerContainer[i]){
+          el.classList.remove("headerContainerHover")
+          el.classList.remove("headerContainerHoverImgHeader")
+        }
+      })
+      // hoverMarca.classList.toggle("headerContainerHoverHoverMarca")
+  })
+}
+}

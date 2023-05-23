@@ -1,5 +1,5 @@
 node_modules
 test-results
-browser.test.ts 
+browser.spec.ts 
 package-lock.json
 package.json
